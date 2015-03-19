@@ -49,6 +49,14 @@ container:
 
 ## Other options
 
+  - `VIRTUAL_HOST` - sets the `ServerName`-directive for *httpd* and *Drupal*'s
+    `base_url` configuration variable; handy in conjunction with
+    [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy)
+    - if it is a comma-seperated list, the first value is used
+  - `SERVERNAME` - use this to explicitlty set httpd's `ServerName`-directive
+    - if none of these both variables are given, the hostname will be used
+  - `BASE_URL` - explicitly set the `base_url` configuration variable for *Drupal*
+    - trailing slashes are not allowed
   - `UPLOAD_LIMIT` (default: `10M`) - sets variables for the *PHP*-interpreter
     to control maximum upload sizes
   - `MEMORY_LIMIT` (default: `64M`) - sets the [`memory_limit`](http://php.net/manual/en/ini.core.php#ini.memory-limit)

@@ -10,6 +10,7 @@ web:
   environment:
     - UPLOAD_LIMIT=20M
     - MEMORY_LIMIT=128M
+    - BASE_URL=foo.bar.zap
 
 db:
   image: mysql
